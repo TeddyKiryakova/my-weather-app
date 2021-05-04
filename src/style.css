@@ -47,6 +47,12 @@ button {
   border-radius: 30px;
   color: #360e36;
 }
+
+.source-code {
+  text-align: center;
+  color: #360e36;
+}
+
 .change-city {
   display: block;
   margin: 0 auto;
