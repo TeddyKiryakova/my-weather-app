@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+ <h1 id="city">
+    Brentwood,UK
+ </h1>
+   <h2>
+    Sunday, 11 April
+   </h2>
+      <h3>
+        🌦 <span id="temperature">17</span>
+
+        
+      </h3>
+<p> 
+  Mostly sunny today.
+</p>
+   <ul>
+    <li>
+       Feels like 0°C
+    </li> 
+    <li>
+        Chance of rain 10%
+    </li>
+    <li id="humidity">
+       Humidity 
+    </li>
+    <li id="wind">
+     Wind speed
+    </li>
+    <li>
+      6:09
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sunrise" viewBox="0 0 16 16">
+      <path d="M7.646 1.146a.5.5 0 0 1 .708 0l1.5 1.5a.5.5 0 0 1-.708.708L8.5 2.707V4.5a.5.5 0 0 1-1 0V2.707l-.646.647a.5.5 0 1 1-.708-.708l1.5-1.5zM2.343 4.343a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707zm11.314 0a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zM8 7a3 3 0 0 1 2.599 4.5H5.4A3 3 0 0 1 8 7zm3.71 4.5a4 4 0 1 0-7.418 0H.499a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
+     </svg>
+    </li>
+    <li>
+    19:49
+     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sunset" viewBox="0 0 16 16">
+      <path d="M7.646 4.854a.5.5 0 0 0 .708 0l1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V1.5a.5.5 0 0 0-1 0v1.793l-.646-.647a.5.5 0 1 0-.708.708l1.5 1.5zm-5.303-.51a.5.5 0 0 1 .707 0l1.414 1.413a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707zm11.314 0a.5.5 0 0 1 0 .706l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zM8 7a3 3 0 0 1 2.599 4.5H5.4A3 3 0 0 1 8 7zm3.71 4.5a4 4 0 1 0-7.418 0H.499a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
+     </svg>
+    </li>
+  </ul>
+ <hr>
+    <div class="row row-cols-auto" >
+      <div class="col-2">
+        MON 
+        <div>
+          9/-2
+        </div> 
+        <div >
+          🌧
+        </div>
+      </div>
+     <div class="col-2">
+       TUE
+        <div>
+          11/2
+        </div>
+        <div>
+          🌦
+        </div>
+      </div>
+      <div class="col-2">
+        WED 
+        <div>
+          11/1
+        </div>
+        <div>
+          🌧
+        </div>
+      </div>
+      <div class="col-2">
+        THU
+         <div>
+           9/2
+         </div>
+         <div>
+           🌤
+         </div>
+      </div>
+      <div class="col-2">
+        FRI
+         <div>
+           11/3
+         </div> 
+         <div>
+           🌤
+          </div>
+        </div>
+      <div class="col-2">
+        SAT
+         <div>
+           14/4
+         </div>
+         <div>
+           🌤
+         </div>
+        </div>
+    </div>
+<hr>
+<form id="search-form">
+   <input type="search" placeholder="Change City" class="change-city"  />
+   <input type="submit" value="Search"  class="submit-button"/>
+</form>
+<button id="my-location">MyLocation</button>
+     </div>
+     <script src="src/script.js">
+    </script>
+</body>
+</html>
